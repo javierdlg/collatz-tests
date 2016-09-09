@@ -1,0 +1,65 @@
+==116== Memcheck, a memory error detector
+==116== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==116== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==116== Command: ./TestCollatz
+==116==
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 15 tests from CollatzFixture
+[ RUN      ] CollatzFixture.read
+[       OK ] CollatzFixture.read (50 ms)
+[ RUN      ] CollatzFixture.eval_1
+[       OK ] CollatzFixture.eval_1 (835 ms)
+[ RUN      ] CollatzFixture.eval_2
+[       OK ] CollatzFixture.eval_2 (15 ms)
+[ RUN      ] CollatzFixture.eval_3
+[       OK ] CollatzFixture.eval_3 (12 ms)
+[ RUN      ] CollatzFixture.eval_4
+[       OK ] CollatzFixture.eval_4 (15 ms)
+[ RUN      ] CollatzFixture.eval_5
+[       OK ] CollatzFixture.eval_5 (2995 ms)
+[ RUN      ] CollatzFixture.eval_6
+[       OK ] CollatzFixture.eval_6 (636 ms)
+[ RUN      ] CollatzFixture.eval_7
+[       OK ] CollatzFixture.eval_7 (23539 ms)
+[ RUN      ] CollatzFixture.get_cycles_1
+[       OK ] CollatzFixture.get_cycles_1 (11 ms)
+[ RUN      ] CollatzFixture.get_cycles_2
+[       OK ] CollatzFixture.get_cycles_2 (12 ms)
+[ RUN      ] CollatzFixture.get_cycles_3
+[       OK ] CollatzFixture.get_cycles_3 (12 ms)
+[ RUN      ] CollatzFixture.get_cycles_4
+[       OK ] CollatzFixture.get_cycles_4 (12 ms)
+[ RUN      ] CollatzFixture.get_cycles_5
+[       OK ] CollatzFixture.get_cycles_5 (11 ms)
+[ RUN      ] CollatzFixture.print
+[       OK ] CollatzFixture.print (12 ms)
+[ RUN      ] CollatzFixture.solve
+[       OK ] CollatzFixture.solve (43 ms)
+[----------] 15 tests from CollatzFixture (28240 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test case ran. (28330 ms total)
+[  PASSED  ] 15 tests.
+==116==
+==116== HEAP SUMMARY:
+==116==     in use at exit: 72,704 bytes in 1 blocks
+==116==   total heap usage: 389,622 allocs, 389,621 frees, 15,775,735 bytes allocated
+==116==
+==116== LEAK SUMMARY:
+==116==    definitely lost: 0 bytes in 0 blocks
+==116==    indirectly lost: 0 bytes in 0 blocks
+==116==      possibly lost: 0 bytes in 0 blocks
+==116==    still reachable: 72,704 bytes in 1 blocks
+==116==         suppressed: 0 bytes in 0 blocks
+==116== Rerun with --leak-check=full to see details of leaked memory
+==116==
+==116== For counts of detected and suppressed errors, rerun with: -v
+==116== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Collatz.c++'
+Lines executed:93.62% of 47
+Branches executed:100.00% of 36
+Taken at least once:80.56% of 36
+Calls executed:96.30% of 27
+Creating 'Collatz.c++.gcov'

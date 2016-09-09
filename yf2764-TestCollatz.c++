@@ -24,7 +24,7 @@ using namespace std;
 // read
 // ----
 
-TEST(CollatzFixture, read) {
+TEST(CollatzFixture, read_1) {
     istringstream r("1 10\n");
     int           i;
     int           j;
@@ -32,6 +32,14 @@ TEST(CollatzFixture, read) {
     ASSERT_TRUE(b);
     ASSERT_EQ( 1, i);
     ASSERT_EQ(10, j);}
+TEST(CollatzFixture, read_2) {
+    istringstream r("100 200\n");
+    int           i;
+    int           j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b);
+    ASSERT_EQ( 100, i);
+    ASSERT_EQ(200, j);}
 
 
 // ----
@@ -68,14 +76,26 @@ TEST(CollatzFixture, calc_3) {
     const int v = calc_cycle_length(52);
     ASSERT_EQ(12, v);
 }
+TEST(CollatzFixture, calc_4) {
+    const int v = calc_cycle_length(5648);
+    ASSERT_EQ(130, v);
+}
+TEST(CollatzFixture, calc_5) {
+    const int v = calc_cycle_length(22403);
+    ASSERT_EQ(70, v);
+}
 // -----
 // print
 // -----
 
-TEST(CollatzFixture, print) {
+TEST(CollatzFixture, print_1) {
     ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
+TEST(CollatzFixture, print_2) {
+    ostringstream w;
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}
 
 // -----
 // solve

@@ -1,0 +1,69 @@
+==911== Memcheck, a memory error detector
+==911== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==911== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==911== Command: ./TestCollatz
+==911== 
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 17 tests from CollatzFixture
+[ RUN      ] CollatzFixture.read_1
+[       OK ] CollatzFixture.read_1 (27 ms)
+[ RUN      ] CollatzFixture.read_2
+[       OK ] CollatzFixture.read_2 (5 ms)
+[ RUN      ] CollatzFixture.read_3
+[       OK ] CollatzFixture.read_3 (5 ms)
+[ RUN      ] CollatzFixture.eval_1
+[       OK ] CollatzFixture.eval_1 (64 ms)
+[ RUN      ] CollatzFixture.eval_2
+[       OK ] CollatzFixture.eval_2 (21 ms)
+[ RUN      ] CollatzFixture.eval_3
+[       OK ] CollatzFixture.eval_3 (3 ms)
+[ RUN      ] CollatzFixture.eval_4
+[       OK ] CollatzFixture.eval_4 (39 ms)
+[ RUN      ] CollatzFixture.eval_lazy_1
+[       OK ] CollatzFixture.eval_lazy_1 (3 ms)
+[ RUN      ] CollatzFixture.eval_lazy_2
+[       OK ] CollatzFixture.eval_lazy_2 (3 ms)
+[ RUN      ] CollatzFixture.eval_lazy_3
+[       OK ] CollatzFixture.eval_lazy_3 (3 ms)
+[ RUN      ] CollatzFixture.eval_lazy_4
+[       OK ] CollatzFixture.eval_lazy_4 (7 ms)
+[ RUN      ] CollatzFixture.print_1
+[       OK ] CollatzFixture.print_1 (8 ms)
+[ RUN      ] CollatzFixture.print_2
+[       OK ] CollatzFixture.print_2 (3 ms)
+[ RUN      ] CollatzFixture.print_3
+[       OK ] CollatzFixture.print_3 (3 ms)
+[ RUN      ] CollatzFixture.solve_1
+[       OK ] CollatzFixture.solve_1 (10 ms)
+[ RUN      ] CollatzFixture.solve_2
+[       OK ] CollatzFixture.solve_2 (8055 ms)
+[ RUN      ] CollatzFixture.solve_3
+[       OK ] CollatzFixture.solve_3 (1392 ms)
+[----------] 17 tests from CollatzFixture (9672 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test case ran. (9724 ms total)
+[  PASSED  ] 17 tests.
+==911== 
+==911== HEAP SUMMARY:
+==911==     in use at exit: 72,704 bytes in 1 blocks
+==911==   total heap usage: 166,362 allocs, 166,361 frees, 6,841,451 bytes allocated
+==911== 
+==911== LEAK SUMMARY:
+==911==    definitely lost: 0 bytes in 0 blocks
+==911==    indirectly lost: 0 bytes in 0 blocks
+==911==      possibly lost: 0 bytes in 0 blocks
+==911==    still reachable: 72,704 bytes in 1 blocks
+==911==         suppressed: 0 bytes in 0 blocks
+==911== Rerun with --leak-check=full to see details of leaked memory
+==911== 
+==911== For counts of detected and suppressed errors, rerun with: -v
+==911== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Collatz.c++'
+Lines executed:90.63% of 32
+Branches executed:100.00% of 32
+Taken at least once:71.88% of 32
+Calls executed:96.88% of 32
+Creating 'Collatz.c++.gcov'
